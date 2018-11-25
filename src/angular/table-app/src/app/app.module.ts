@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import {HttpClientModule} from '@angular/common/http';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,

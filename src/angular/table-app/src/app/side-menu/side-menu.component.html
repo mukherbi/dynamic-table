@@ -1,3 +1,21 @@
-<p>
-  side-menu works!
-</p>
+<div class="row">
+	<div class="col-xs-2 col-sm-2 col-md-2">
+		<div id="panel-group">
+			<div class="panel panel-default"
+				*ngFor="let menu of menus; let i = index">
+				<div class="panel-heading" (click)="current = i">
+					<a href="#" class="panel-title">{{ menu.menuLabel }}</a>
+				</div>
+				<div id="collapse1" class="panel-collapse"
+					[class.collapse]='current != i'>
+					<div class="panel-body">
+						<ul>
+							<li *ngFor="let menu of menu.subMenus"><a href="#" (click)="sendViewId(menu.viewId)">{{
+									menu.menuLabel }}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

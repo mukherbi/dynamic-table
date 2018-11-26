@@ -8,10 +8,10 @@ import {HttpClient} from '@angular/common/http';
 })
 export class SideMenuComponent implements OnInit {
 
+	current: number = 0;
+  items: any[];
 	menus: any[];
-  constructor(private httpClient: HttpClient) { }
-
-	
+  constructor(private httpClient: HttpClient) { }	
 
   ngOnInit() {
   
@@ -20,5 +20,10 @@ export class SideMenuComponent implements OnInit {
       console.log(this.menus);
     });
   }
+
+	sendViewId(viewId){
+	console.log("Inside sendViewId method");
+		console.log(viewId);
+	}
 
 }
